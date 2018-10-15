@@ -1,6 +1,7 @@
 module.exports = {
     title: 'LinDaiDai',
     description: 'this is lindaidai blog',
+    dest: './dist',    // 设置输出目录
     base: '/vuepress-bolg/', // 设置站点根路径
     repo: 'https://github.com/LinDaiDai/vuepress-bolg', // 添加 github 链接
     themeConfig: {
@@ -8,15 +9,15 @@ module.exports = {
         nav: [
             { text: "Home", link: "/" },
             { text: "Blog", link: "/blog/" },
-            { text: "Projects", link: "/projects/" },
-            { 
-                text: 'Link',
-                items: [
-                    { text: 'GitHub', link: 'https://github.com/LinDaiDai' },
-                    { text: 'HomePage', link: 'https://lindaidai.github.io/myHomePage/' },
-                    { text: 'JianShu', link: 'https://www.jianshu.com/u/00d24750ae47' }
-                ]
-            }
+            { text: "Projects", link: "/projects/" }
+            // { 
+            //     text: 'Link',
+            //     items: [
+            //         { text: 'GitHub', link: 'https://github.com/LinDaiDai' },
+            //         { text: 'HomePage', link: 'https://lindaidai.github.io/myHomePage/' },
+            //         { text: 'JianShu', link: 'https://www.jianshu.com/u/00d24750ae47' }
+            //     ]
+            // }
         ],
         sidebar: {
             '/blog/': genSidebarConfig('Blog')
