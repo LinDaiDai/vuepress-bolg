@@ -9,15 +9,14 @@ module.exports = {
         nav: [
             { text: "Home", link: "/" },
             { text: "Blog", link: "/blog/" },
-            { text: "Projects", link: "/projects/" }
-            // { 
-            //     text: 'Link',
-            //     items: [
-            //         { text: 'GitHub', link: 'https://github.com/LinDaiDai' },
-            //         { text: 'HomePage', link: 'https://lindaidai.github.io/myHomePage/' },
-            //         { text: 'JianShu', link: 'https://www.jianshu.com/u/00d24750ae47' }
-            //     ]
-            // }
+            { text: "Projects", link: "/projects/" },
+            { 
+                text: 'Link',
+                items: [
+                    { text: 'GitHub', link: 'https://github.com/LinDaiDai'},
+                    { text: 'HomePage', link: 'https://lindaidai.github.io/myHomePage/'}
+                ]
+            }
         ],
         sidebar: {
             '/blog/': genSidebarConfig('Blog')
