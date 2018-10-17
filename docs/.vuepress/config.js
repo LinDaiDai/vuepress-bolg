@@ -19,7 +19,8 @@ module.exports = {
             }
         ],
         sidebar: {
-            '/blog/': genSidebarConfig('Blog')
+            '/blog/': genSidebarConfig('Blog'),
+            '/projects/': genSidebarProjectConfig('Projects')
         },
         lastUpdated: 'Last Updated'
     },
@@ -35,12 +36,24 @@ function genSidebarConfig(title) {
     return [
         {
             title,
-            collapsable: false,
+            collapsable: false,//当前分组是否展开
             children: [
                 '',
                 'getting-started',
                 'customize',
                 'advanced',
+            ]
+        }
+    ]
+}
+function genSidebarProjectConfig(title) {
+    return [
+        {
+            title,
+            collapsable: false,
+            children: [
+                '',
+                'projects1'
             ]
         }
     ]

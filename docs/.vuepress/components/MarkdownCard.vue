@@ -6,6 +6,7 @@
     <div class="card-content">
       <slot></slot>
     </div>
+    <div class="card-footer"></div>
   </div>
 </template>
 
@@ -49,6 +50,10 @@ export default {
       -webkit-margin-after 0.5em
     blockquote 
       font-size 1rem
+  .card-footer
+    height 50px
+    width 50px
+    background -webkit-gradient(linear, 0 0, 0 100%, from(#64E8DE), to(#8A64EB))
 
 @media (max-width: $MQMobileNarrow)
   .md-card

@@ -18,7 +18,7 @@ Here are some works of mine :books:
 
 ## Publications
 
-<MarkdownCard>
+<MarkdownCard image="/projects/profile1.jpg">
 
   **Harry Potter and the Deathly Hallows**
   
