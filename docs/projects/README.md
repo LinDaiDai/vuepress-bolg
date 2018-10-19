@@ -1,3 +1,8 @@
+---
+layout: MarkdownCard
+description: This is MarkdownCard
+head: MarkdownCard
+---
 # Work
 
 Here are some works of mine :books:
@@ -18,7 +23,7 @@ Here are some works of mine :books:
 
 ## Publications
 
-<MarkdownCard image="/projects/profile1.jpg">
+<MarkdownCard>
 
   **Harry Potter and the Deathly Hallows**
   

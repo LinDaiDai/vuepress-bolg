@@ -1,3 +1,5 @@
+@import './override.styl'
+@import './components/styles/config.styl'
 // disable the search box
 .search-box
   display none
@@ -6,5 +8,29 @@
 .icon.outbound
   display none
 
+//自定义
+html, body, #app, .theme-container, .page{
+  height 100%
+} 
 .theme-container
-  background -webkit-gradient(linear, 0 0, 0 100%, from(#64E8DE), to(#8A64EB))
+  background $homeBgColor
+
+.navbar
+  background $navbarBgColor
+  box-shadow 1px 1px 1px 1px rgba(0, 0, 0, 0.1)
+  padding-bottom 0
+  border 0
+  .links
+    background $navbarBgColor
+.sidebar
+  background $sidebarBgColor
+  box-shadow 1px 3px 5px 1px rgba(0, 0, 0, 0.1)
+  border 0
+.sidebar-heading
+  color #fff
+a.sidebar-link
+  color #fff
+  padding 0.6rem 1rem 0.6rem 1.25rem
+a.sidebar-link.active
+  color #fff
+  background #1F337E
