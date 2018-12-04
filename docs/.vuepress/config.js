@@ -10,6 +10,7 @@ module.exports = {
             { text: "Home", link: "/" },
             { text: "Blog", link: "/blog/" },
             { text: "Projects", link: "/projects/" },
+            { text: "Routers", link: "/routers/" },
             { 
                 text: 'Link',
                 items: [
@@ -20,7 +21,8 @@ module.exports = {
         ],
         sidebar: {
             '/blog/': genSidebarConfig('Blog'),
-            '/projects/': genSidebarProjectConfig('Projects')
+            '/projects/': genSidebarProjectConfig('Projects'),
+            '/routers': genSidebarRouters('Routers')
         },
         lastUpdated: 'Last Updated'
     },
@@ -54,6 +56,44 @@ function genSidebarProjectConfig(title) {
             children: [
                 '',
                 'projects1'
+            ]
+        }
+    ]
+}
+function genSidebarRouters(title) {
+    return [
+        {
+            title,
+            collapsable: false,
+            children: getRouterChildren1()
+        },
+        {
+            title: 'title1',
+            collapsable: false,
+            children: getRouterChildren2()
+        }
+    ]
+}
+function getRouterChildren1() {
+    return [
+        {
+            title: 'father1',
+            collapsable: false,
+            children: [
+               '',
+               'son1_1' 
+            ]
+        }
+    ]
+}
+function getRouterChildren2() {
+    return [
+        {
+            title: 'father2',
+            collapsable: false,
+            children: [
+               '',
+               'son2_1' 
             ]
         }
     ]
