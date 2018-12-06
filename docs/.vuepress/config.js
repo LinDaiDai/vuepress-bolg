@@ -8,9 +8,9 @@ module.exports = {
         //导航栏
         nav: [
             { text: "Home", link: "/" },
+            { text: "前端笔记", link: "/webNotes/" },
             { text: "Blog", link: "/blog/" },
             { text: "Projects", link: "/projects/" },
-            { text: "Routers", link: "/routers/" },
             { 
                 text: 'Link',
                 items: [
@@ -22,7 +22,7 @@ module.exports = {
         sidebar: {
             '/blog/': genSidebarConfig('Blog'),
             '/projects/': genSidebarProjectConfig('Projects'),
-            '/routers': genSidebarRouters('Routers')
+            '/webNotes/': genSidebarWebNotesConfig('前端笔记')
         },
         lastUpdated: 'Last Updated'
     },
@@ -40,10 +40,7 @@ function genSidebarConfig(title) {
             title,
             collapsable: false,//当前分组是否展开
             children: [
-                '',
-                'getting-started',
-                'customize',
-                'advanced',
+                ''
             ]
         }
     ]
@@ -60,40 +57,26 @@ function genSidebarProjectConfig(title) {
         }
     ]
 }
-function genSidebarRouters(title) {
+function genSidebarWebNotesConfig(title) {
     return [
         {
-            title,
-            collapsable: false,
-            children: getRouterChildren1()
+            title: 'HTML',
+            children: [
+                'HTML/tag'
+            ]
         },
         {
-            title: 'title1',
-            collapsable: false,
-            children: getRouterChildren2()
-        }
-    ]
-}
-function getRouterChildren1() {
-    return [
-        {
-            title: 'father1',
-            collapsable: false,
+            title: 'CSS',
             children: [
-               '',
-               'son1_1' 
+                ''
             ]
-        }
-    ]
-}
-function getRouterChildren2() {
-    return [
+        },
         {
-            title: 'father2',
-            collapsable: false,
+            title: 'JavaScript',
             children: [
-               '',
-               'son2_1' 
+                'JavaScript/ajax.md',
+                'JavaScript/this.md',
+                'JavaScript/prototype.md',
             ]
         }
     ]
