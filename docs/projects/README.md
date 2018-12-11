@@ -1,15 +1,10 @@
----
-layout: MarkdownCard
-description: This is MarkdownCard
-head: MarkdownCard
----
 # Work
 
 Here are some works of mine :books:
 
 ## Projects
 
-<MarkdownCard image="/projects/profile1.jpg">
+<MarkdownCard image="/projects/1.png">
 
   Harry P., Hermione G., *et al*
   

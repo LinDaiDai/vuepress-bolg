@@ -3,7 +3,7 @@ layout: Projects
 sidebar: false
 
 projects:
-- image: /projects/profile1.jpg
+- image: /projects/1.png
   rows:
   - content: 'Harry P., Hermione G., *et al*'
   - content: "**The Making of Harry Potter's Wand**"
