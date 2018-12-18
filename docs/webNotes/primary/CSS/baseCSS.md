@@ -522,97 +522,101 @@ both 清除左右俩边的浮动
 
 none 不清除浮动
 
+
+
 2.清除浮动第二个方法：
 
 在要清除浮动的标签加上:after{ } 原因是clear针对浮动元素的下一个元素 在父级后面加一个空的元素并清除他的浮动就可以解决父级塌陷的问题；
 
 ```css
 .father:after{
-
-content:"";
-
-display:block;
-
-clear:both;
-
+	content:"";
+	display:block;
+	clear:both;
 }
 ```
 
 例：
 
+```html
 <style>
+	.father{
+        width:1000px;
+        border:5px solid black;
+	}
+    .son_1{
+        width:200px;
+        height:200px;
+        float:left;
+    }
+    .son_2{
+        width:200px;
+        height:200px;
+        float:left;
+    }
 
-.father{
-
-width:1000px;
-
-border:5px solid black;
-
-}
-
-.son_1{
-
-width:200px;
-
-height:200px;
-
-float:left;
-
-}
-
-.son_2{
-
-width:200px;
-
-height:200px;
-
-float:left;
-
-}
-
-.father:after{
-
-content"";
-
-display:block;
-
-clear:both;
-
-}
-
+    .father:after{
+        content"";
+        display:block;
+        clear:both;
+    }
 </style>
+<body>
+    <div class="father">
+        <div class="son_1"></div>
+        <div class="son_1"></div>
+    </div>
+</body>
+```
 
 
 
-<div class="father">
+3.其他清除浮动方法：
 
-<div class="son_1"></div>
+* 给父级float:left;  弊端： 会影响后面的元素
+  如：给父级height:500px; 子级高度改变父级也要改变
 
-<div class="son_2"></div>
+* 给父级overflow:hidden; 弊端：不同浏览器会有兼容性问题
 
-</div>
+* 给父级display:inline-block; 弊端：改变了父级原本的盒子类型
 
-其他清除浮动方法：
 
-给父级float:left; 会影响后面的元素
-给父级height:500px; 子级高度改变父级也要改变
 
-给父级overflow:hidden;不同浏览器会有兼容性问题
+## 8. Zoom
 
-给父级display:inline-block;
-
-9.Zoom
 修改页面加载时的倍率；
 
 为了触发 IE 浏览器的 haslayout 特性；
 
-11.! important
-!important是CSS1就定义的语法，作用是提高指定样式规则的应用优先权。语法格式{ cssRule !important }，即写在定义的最后面，例如：box{color:red !important;}
+## 9. ! important
+
+!important是CSS1就定义的语法，作用是提高指定样式规则的应用优先权。
+
+> 语法格式 { cssRule !important }，
+
+即写在定义的最后面，例如：
+
+```html
+.box{
+	color:red;!important;
+}
+<body>
+	<div class="box" style="color: blue;">I'm a box</div><!--最终显示的还是红色-->
+</body>
+```
+
+**在CSS中，通过对某一样式声明! important ，可以更改默认的CSS样式优先级规则，使该条样式属性声明具有最高优先级，也就是相当于写在最下面。**
 
 
-在CSS中，通过对某一样式声明! important ，可以更改默认的CSS样式优先级规则，使该条样式属性声明具有最高优先级，也就是相当于写在最下面。
-12.  z-index
-设置内容在z轴上的数值
-这个数值不限
-制正负，但是负数会导致用户事件无法被传递（所有不要设定为负数）；
-z-index未设置时  默认为auto
+
+## 10. z-index
+
+> 作用：设置内容在z轴上的数值,也就是设置元素的层级,这个数值不限制正负，但是负数会导致用户事件无法被传递（所有不要设定为负数）；
+> z-index未设置时  默认为auto
+
+```css
+.box{
+    z-index: 100;
+}
+```
+

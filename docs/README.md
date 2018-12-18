@@ -7,7 +7,7 @@ info: 'Student at Hogwarts School'
 interests: 'Interests: Quidditch and Wizard chess.'
 socials:
 - title: github
-  link: https://github.com/mtobeiyf
+  link: https://github.com/lindaidai
 - title: linkedin
   link: https://www.linkedin.com
 - title: instagram
@@ -18,7 +18,7 @@ actions:
 - text: Projects
   link: /projects/
 - text: Blog
-  link: https://github.com/mtobeiyf
+  link: https://github.com/lindaidai
 - text: CV
   link: /article/
 footer: Made with ♥ by Fing. Powered by VuePress

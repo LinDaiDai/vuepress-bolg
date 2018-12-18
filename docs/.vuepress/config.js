@@ -1,3 +1,5 @@
+var config = require('./config/sidebar'); 
+console.log(config);
 module.exports = {
   title: "Harry Potter",
   description: "The description of the site.",
@@ -8,8 +10,9 @@ module.exports = {
   themeConfig: {
     nav: require('./nav/zh'),
     sidebar: {
-      '/guide/': genSidebarConfig('Guide'),
-      '/webNotes/': getSidebarWebNotes('新手入门', '前端进阶')
+      '/guide/': genSidebarConfig('Guide1'),
+      '/webNotes/primary/': config.getSidebarPrimary(),
+      '/webNotes/advanced/': getSidebarAdvanced('前端进阶')
     },
     lastUpdated: 'Last Updated'
   },
@@ -37,24 +40,61 @@ function genSidebarConfig (title) {
     }
   ]
 }
+function getSidebarPrimary() {
+  return [
+      '',
+      {
+          title: 'HTML3',
+          children: [
+              'HTML/',
+              // 'HTML/tag.md',
+              // 'HTML/form.md',
+          ]
+      },
+      {
+          title: 'CSS',
+          children: [
+              'CSS/'
+          ]
+      },
+      {
+          title: 'JavaScript',
+          children: [
+              'JavaScript/ajax.md',
+              'JavaScript/this.md',
+              'JavaScript/prototype.md'
+          ]
+      }
+  ]
+}
+function getSidebarAdvanced(title) {
+  return [
+    {
+      title,
+      children: [
+        '',
+        'interview/'
+      ]
+    }
+  ]
+}
 function getSidebarWebNotes(primaryTitle, advancedTitle) {
   return [
       {
         title: primaryTitle,
         children: [
-            'primary.md',
-            'primary/HTML/tag.md',
+            // 'primary/HTML/tag.md',
             'primary/JavaScript/ajax.md',
             'primary/JavaScript/this.md',
             'primary/JavaScript/prototype.md'
         ]
       },
-      {
-        title: advancedTitle,
-        children: [
-            'advanced.md',
-            'advanced/Interview/interview1.md'
-        ]
-      }
+      // {
+      //   title: advancedTitle,
+      //   children: [
+      //       'advanced',
+      //       'advanced/Interview/interview1.md'
+      //   ]
+      // }
   ]
 }
