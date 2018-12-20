@@ -13,7 +13,9 @@ module.exports = {
             {
                 title: 'CSS',
                 children: [
-                    'CSS/'
+                    'CSS/',
+                    'CSS/baseCSS.md',
+                    'CSS/pseudo.md'
                 ]
             },
             {
