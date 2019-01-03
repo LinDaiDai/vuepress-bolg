@@ -1,7 +1,7 @@
 var config = require('./config/sidebar'); 
 console.log(config);
 module.exports = {
-  title: "Harry Potter",
+  title: "LinDaiDai",
   description: "The description of the site.",
   head: [["link", { rel: "icon", href: `/logo.png` }]],
   base: "/",
@@ -10,8 +10,8 @@ module.exports = {
   themeConfig: {
     nav: require('./nav/zh'),
     sidebar: {
-      '/guide/': genSidebarConfig('Guide1'),
-      '/webNotes/primary/': config.getSidebarPrimary(),
+      '/guide/': genSidebarConfig('Guide'),
+      '/webNotes/primary/': getSidebarPrimary(),
       '/webNotes/advanced/': getSidebarAdvanced('前端进阶')
     },
     lastUpdated: 'Last Updated'
@@ -44,17 +44,19 @@ function getSidebarPrimary() {
   return [
       '',
       {
-          title: 'HTML3',
+          title: 'HTML',
           children: [
               'HTML/',
-              // 'HTML/tag.md',
-              // 'HTML/form.md',
+              'HTML/tag.md',
+              'HTML/form.md',
           ]
       },
       {
           title: 'CSS',
           children: [
-              'CSS/'
+              'CSS/',
+              'CSS/baseCSS.md',
+              'CSS/pseudo.md'
           ]
       },
       {
@@ -76,25 +78,5 @@ function getSidebarAdvanced(title) {
         'interview/'
       ]
     }
-  ]
-}
-function getSidebarWebNotes(primaryTitle, advancedTitle) {
-  return [
-      {
-        title: primaryTitle,
-        children: [
-            // 'primary/HTML/tag.md',
-            'primary/JavaScript/ajax.md',
-            'primary/JavaScript/this.md',
-            'primary/JavaScript/prototype.md'
-        ]
-      },
-      // {
-      //   title: advancedTitle,
-      //   children: [
-      //       'advanced',
-      //       'advanced/Interview/interview1.md'
-      //   ]
-      // }
   ]
 }

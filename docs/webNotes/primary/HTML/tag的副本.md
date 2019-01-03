@@ -90,7 +90,7 @@ HTML的头部
 
 > 例如
 
-![image-20181209141027180](./image/tag-1.png)
+<!-- ![image-20181209141027180](/Users/yb/Library/Application Support/typora-user-images/image-20181209141027180.png) -->
 
 > 代码
 
@@ -132,22 +132,21 @@ HTML的头部
 > 实例
 
 **实例 1 - 定义文档关键词，用于搜索引擎：**
-```html
+
 <meta name="keywords" content="HTML, CSS, XML, XHTML, JavaScript">
-```
+
 **实例 2 - 定义web页面描述：**
-```html
+
 <meta name="description" content="Free Web tutorials on HTML and CSS">
-```
 
 **实例 3 - 定义页面作者：**
-```html
+
 <meta name="author" content="Hege Refsnes">
-```
+
 **实例 4 - 每30秒刷新页面：**
-```html
+
 <meta http-equiv="refresh" content="30">
-```
+
 
 
 #### (6) `<body>`标签
@@ -927,4 +926,15 @@ div{我是世界第 $ 帅}*3 +tab
 
 如`w3c`的官网下面：
 
-![image-20181209160226664](./image/tag-2.png)
+<!-- ![image-20181209160226664](/Users/yb/Library/Application Support/typora-user-images/image-20181209160226664.png) -->
+
+
+
+
+
+
+
+
+
+
+

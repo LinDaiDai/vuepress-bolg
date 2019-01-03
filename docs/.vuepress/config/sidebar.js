@@ -3,11 +3,11 @@ module.exports = {
         return [
             '',
             {
-                title: 'HTML3',
+                title: 'HTML',
                 children: [
                     'HTML/',
-                    // 'HTML/tag.md',
-                    // 'HTML/form.md',
+                    'HTML/tag.md',
+                    'HTML/form.md',
                 ]
             },
             {
