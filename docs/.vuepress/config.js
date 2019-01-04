@@ -1,12 +1,11 @@
 var config = require('./config/sidebar'); 
-console.log(config);
 module.exports = {
   title: "LinDaiDai",
-  description: "The description of the site.",
+  description: "this is LinDaiDai blog'",
   head: [["link", { rel: "icon", href: `/logo.png` }]],
-  base: "/",
-  dest: "./dist",
-
+  base: "/vuepress-bolg/",// 设置站点根路径
+  dest: "./dist",// 设置输出目录
+  repo: 'https://github.com/LinDaiDai/vuepress-bolg', // 添加 github 链接
   themeConfig: {
     nav: require('./nav/zh'),
     sidebar: {
@@ -62,6 +61,7 @@ function getSidebarPrimary() {
       {
           title: 'JavaScript',
           children: [
+              'JavaScript/baseJS.md',
               'JavaScript/ajax.md',
               'JavaScript/this.md',
               'JavaScript/prototype.md'

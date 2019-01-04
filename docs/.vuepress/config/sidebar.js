@@ -21,6 +21,7 @@ module.exports = {
             {
                 title: 'JavaScript',
                 children: [
+                    'JavaScript/baseJS.md',
                     'JavaScript/ajax.md',
                     'JavaScript/this.md',
                     'JavaScript/prototype.md'
